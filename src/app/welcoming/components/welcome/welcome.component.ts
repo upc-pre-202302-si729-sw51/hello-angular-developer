@@ -10,7 +10,7 @@ export class WelcomeComponent {
   @Input() lastName!: string;
 
   get fullName(): string {
-    return `${this.firstName} ${this.lastName}`;
+    return this.firstName == '' || this.lastName == '' ? 'Unknown' : `${this.firstName} ${this.lastName}`;
   }
 
 }
